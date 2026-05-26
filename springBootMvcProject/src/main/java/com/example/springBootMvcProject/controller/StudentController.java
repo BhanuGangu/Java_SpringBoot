@@ -64,6 +64,8 @@ public class StudentController {
 		return "edit_student";
 		
 	}
+	
+	/*this method is used to update the record in DB*/
 
 	@PostMapping("/students/{studentId}")
 	public String updateStudent(@PathVariable Long studentId, 
@@ -81,7 +83,7 @@ public class StudentController {
 		
 	}
 	
-	
+	/* this is used to remove the record in DB*/
 	@GetMapping("/students/{studentId}/delete")
 	public String deleteStudent(@PathVariable Long studentId) {
 		
@@ -89,6 +91,7 @@ public class StudentController {
 		return "redirect:/students";
 	}
 	
+	/* this is used to view the record */
 	@GetMapping("/students/{studentId}/view")
 	public String viewStudent(@PathVariable Long studentId,
 			Model model) {

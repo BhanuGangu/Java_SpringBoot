@@ -1,7 +1,7 @@
 package com.example.springBootMvcProject.service.imp;
 
 import java.util.List;
-import java.util.stream.Collector;
+
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class StudentService implements StudentServiceInterface {
 		
 	}
 
-
+	/* this is used to get the single student record*/
 	public StudentDTO getStudentById(Long studentId) {
 		// TODO Auto-generated method stub
 		
@@ -49,13 +49,13 @@ public class StudentService implements StudentServiceInterface {
 		return studentDTO;
 	}
 
-
+	/* this is update the student record in the DB */
 	public void updateStudent(@Valid StudentDTO studentDTO) {
 		// TODO Auto-generated method stub
 		studentRepository.save(StudentMapper.mapToStudent(studentDTO));
 	}
 
-
+	/* this method is used to remove the student record in the DB */
 	public void deleteStudent(Long studentId) {
 		// TODO Auto-generated method stub
 		
